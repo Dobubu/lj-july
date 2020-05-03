@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="content-language" content="zh-TW">
+    <title>LUXJOY 精品購物網 - shop with style</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="apple-touch-icon" href="https://www.luxjoy.com/theme/main/img/common/apple60.jpg">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://www.luxjoy.com//theme/main/img/common/apple76.jpg">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://www.luxjoy.com//theme/main/img/common/apple120.jpg">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://www.luxjoy.com//theme/main/img/common/apple152.jpg">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700&amp;display=swap">
+</head>
+
+<body ontouchstart="">
+    <div id="wrapper">
+        <div id="ig-follow-mobile"><a href="https://goo.gl/sXAaCd" target="_blank">
+                <div class="ig-info"><i class="ig-icon fa fa-instagram"></i>
+                    <div class="ig-name">@luxjoyselect</div>
+                </div>
+                <div class="bar"></div>
+                <div class="follow-btn">FOLLOW US</div>
+            </a></div>
+        <div class="text-center style-1" id="nav-message" data-msgheight="50">
+            <p>母親節組合商品5折起 全館買萬折千！<a>前往活動</a></p>
+        </div>
+        <nav class="clearfix" id="nav-top">
+            <div class="container"><a class="pull-left" id="ctrl-nav-menu" href="javascript:void(0)">
+                    <div class="bar"></div>
+                </a>
+                <div class="pull-left" id="nav-top-logo"><a href="/">
+                        <div class="logo-anm hidden-xs hidden-sm" id="Stage"></div>
+                    </a></div>
+                <div class="clearfix pull-left" id="nav-menu">
+                    <div class="pull-right">
+                        <ul class="level-1 clearfix" id="nav-menu-sub">
+                            <li class="hidden-xs hidden-sm"><a class="icon-search no-letter-spacing"
+                                    href="javascript:;">
+                                    <div class="box">
+                                        <div class="circle"></div>
+                                        <div class="bar"></div>
+                                    </div>
+                                </a></li>
+                            <li id="member_area"><a class="icon-signin no-letter-spacing hidden-xs"
+                                    href="javascript:void(0);">
+                                    <figure><img class="img-responsive" src="../img/common/nav-sub-signin.png"></figure>
+                                </a><a class="icon-signin no-letter-spacing visible-xs" href="member/login/">
+                                    <figure><img class="img-responsive" src="../img/common/nav-sub-signin.png"></figure>
+                                    <span class="hidden-md">會員登入</span>
+                                </a>
+                                <div class="level-2-box entrance hidden-xs" style="display: none;"><a
+                                        class="close-level-2-box"></a>
+                                    <h6 class="text-center">登入．註冊</h6>
+                                    <div class="row">
+                                        <div class="col-md-6 sign-in">
+                                            <p class="fail text-center login_error" style="display:none;">
+                                                登入失敗，請檢查您的帳號密碼是否有誤。</p>
+                                            <p>我已是LUXJOY的會員<br> 請輸入您的電子信箱/手機與密碼登入</p>
+                                            <form id="form_menu_login" name="form_menu_login" method="post"
+                                                action="member/login_menu/" novalidate="novalidate">
+                                                <fieldset class="form-group form-input"><input
+                                                        class="form-control required" id="menu_login_account"
+                                                        type="text" name="menu_login_account" placeholder="電子信箱/手機"
+                                                        value="" aria-required="true"><span class="help"></span>
+                                                </fieldset>
+                                                <fieldset class="form-group form-input"><input
+                                                        class="form-control required" id="menu_login_password"
+                                                        type="password" name="menu_login_password"
+                                                        placeholder="密碼，至少 6 個字元" value="" aria-required="true"><span
+                                                        class="help"></span></fieldset><a class="link"
+                                                    id="ctrl-forget-apply" href="javascript:;">忘記密碼</a>
+                                                <div class="checkbox form-input"><input id="remember" type="checkbox"
+                                                        name="remember" value="1"><label
+                                                        for="remember">是否需要系統記住您的帳號與密碼?</label></div><button class="btn"
+                                                    type="submit">登入</button><input id="here" name="here" type="hidden"
+                                                    value="1">
+                                            </form>
+                                            <div class="quick-login text-center"><span
+                                                    class="or">或</span><br><b>快速登入</b><a class="btn facebook"
+                                                    href="javascript:;" onclick="facebook_login_menu()"><i
+                                                        class="fa fa-facebook"></i>Facebook</a><a class="btn weibo"
+                                                    href="https://api.weibo.com/oauth2/authorize?client_id=3805113823&amp;redirect_uri=https%3A%2F%2Fwww.luxjoy.com%2Fmember%2Fweibo_login%2F&amp;response_type=code"><i
+                                                        class="fa fa-weibo"></i>Weibo</a><a class="btn wechat"
+                                                    href="https://open.weixin.qq.com/connect/qrconnect?appid=wxbd14a9dd2642e15a&amp;redirect_uri=https%3A%2F%2Fwww.luxjoy.com%2Fmember%2Fwechat_login%2F&amp;response_type=code&amp;scope=snsapi_login#wechat_redirect"><i
+                                                        class="fa fa-weixin"></i>Wechat</a></div>
+                                        </div>
+                                        <div class="col-md-6 sign-up">
+                                            <p>您還不是 LUXJOY 會員嗎？立即註冊<br><a class="btn" id="ctrl-sign-up"
+                                                    href="javascript:;">加入會員</a><br></p>
+                                            <p>．新會員專屬200元購物金<br>．獨家折扣及減價優惠<br>．不定期會員專屬優惠</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="level-2-box sign-up"><a class="close-level-2-box"></a>
+                                    <h6 class="text-center">立即註冊</h6>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p>註冊 LUXJOY ，享受更多精彩禮遇</p>
+                                            <form id="form_menu_register" name="form_menu_register" method="post"
+                                                action="member/register_menu/" novalidate="novalidate">
+                                                <fieldset class="form-group form-input"><input
+                                                        class="form-control required" id="menu_reg_name" type="text"
+                                                        placeholder="姓名" name="menu_reg_name" aria-required="true"><span
+                                                        class="help"></span></fieldset>
+                                                <fieldset class="form-group form-input"><input
+                                                        class="form-control required" id="menu_reg_account" type="text"
+                                                        placeholder="電子信箱" name="menu_reg_account"
+                                                        aria-required="true"><span class="help"></span></fieldset>
+                                                <fieldset class="form-group form-input"><input
+                                                        class="form-control required" id="menu_reg_password"
+                                                        type="password" placeholder="密碼，至少 6 個字元"
+                                                        name="menu_reg_password" aria-required="true"><span
+                                                        class="help"></span></fieldset>
+                                                <fieldset class="form-group form-input"><input
+                                                        class="form-control required" id="menu_reg_password_again"
+                                                        type="password" placeholder="確認密碼"
+                                                        name="menu_reg_password_again" aria-required="true"><span
+                                                        class="help"></span></fieldset>
+                                                <fieldset class="form-group form-input"><input
+                                                        class="form-control required" id="menu_reg_mobile" type="text"
+                                                        placeholder="手機號碼" name="menu_reg_mobile"
+                                                        aria-required="true"><span class="help"></span></fieldset>
+                                                <fieldset class="form-group form-input"><input
+                                                        class="form-control required" id="menu_reg_birth" type="text"
+                                                        placeholder="輸入生日獲得生日禮，例：1980/01/10" name="menu_reg_birth"
+                                                        aria-required="true"><span class="help"></span></fieldset>
+                                                <fieldset class="form-group form-input"><input class="form-control"
+                                                        id="menu_invitation_code" type="text" placeholder="好友邀請碼"
+                                                        name="menu_invitation_code"><span class="help"></span>
+                                                </fieldset>
+                                                <div class="checkbox form-input"><input id="newsletter" type="checkbox"
+                                                        name="newsletter" value="1"><label
+                                                        for="newsletter">訂閱電子報</label></div>
+                                                <div class="checkbox form-input"><input class="required"
+                                                        id="menu_reg_agreement" type="checkbox"
+                                                        name="menu_reg_agreement" value="1" aria-required="true"><label
+                                                        for="menu_reg_agreement">我同意 LUXJOY 客戶隱私權政策與客戶服務條款</label><span
+                                                        class="help"></span></div><button class="btn"
+                                                    type="submit">確認</button><input id="here" name="here" type="hidden"
+                                                    value="1">
+                                            </form>
+                                        </div>
+                                        <div class="col-md-6 hidden-xs hidden-sm">
+                                            <p><img alt="" src="/upload/images/160912050520263689jvoxe.jpg"></p>
+                                            <p><strong>現在起快速結帳後系統將自動為您升級為會員！</strong><br><br>將喜愛的商品放入購物車完成訂購步驟，最後留下個人資料，系統將自動為您升級為會員。<br><br>立即享受，如此輕鬆的快速線上購物。
+                                            </p>
+                                            <style>
+                                                .login-register p img {
+                                                    width: 100%;
+                                                }
+                                            </style>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="level-2-box forget-apply"><a class="close-level-2-box"></a>
+                                    <h6 class="text-center">忘記密碼</h6>
+                                    <p>請輸入您的電子信箱，我們將寄出重設密碼通知信</p>
+                                    <form id="form_menu_forget_password" name="form_menu_forget_password"
+                                        action="member/forget_password_menu/" onsubmit="javascript:return 0;"
+                                        method="post" novalidate="novalidate">
+                                        <fieldset class="form-group form-input"><input class="form-control"
+                                                id="menu_fg_account" type="text" placeholder="電子信箱"
+                                                name="menu_fg_account"><span class="help"></span></fieldset>
+                                        <div class="clearfix"><button class="btn pull-right"
+                                                type="submit">送出</button><input id="here" name="here" type="hidden"
+                                                value="1"></div>
+                                    </form>
+                                </div>
+                                <div class="level-2-box forget-complete"><a class="close-level-2-box"></a>
+                                    <div class="response_html"></div>
+                                    <div class="clearfix"><a class="btn pull-right" id="ctrl-forget-complete">關閉</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a class="icon-wish no-letter-spacing" href="member/wishlist/" title="我的願望清單">
+                                    <figure><img class="img-responsive" src="../img/common/nav-sub-wish2.png"></figure>
+                                    <span class="hidden-sm hidden-xs">99</span>
+                                </a></li>
+                        </ul>
+                    </div>
+                    <div class="pull-left">
+                        <form class="clearfix" id="search-bar" name="form_search" action="search" method="get">
+                            <fieldset class="form-group pull-left"><input class="form-control" id="q" type="text"
+                                    placeholder="Search..." name="q"></fieldset><button
+                                class="btn visible-xs visible-sm pull-right" type="submit">送出</button>
+                        </form>
+                        <ul class="level-1 pull-left">
+                            <li class="no_arrow"><a class="no-letter-spacing"
+                                    href="https://www.luxjoy.com/product/all">NEW</a></li>
+                            <li class="no_arrow"><a href="brand/">品牌</a></li>
+                        </ul>
+                        <ul class="level-1 pull-left" id="nav-menu-main" role="tablist">
+                            <li><a href="category/women/"><span></span>女士</a>
+                                <div class="level-2-full">
+                                    <div class="container">
+                                        <ul class="sub-links nav-menu-lv2" id="nav-menu-2nd" role="tablist">
+                                            <li class="visible-xs visible-sm"><a
+                                                    href="category/women/"><span></span>探索</a></li>
+                                            <li><a href="category/women/newest/"><span></span>新品</a></li>
+                                            <li><a href="category/women/all/" role="tab" aria-selected="false"
+                                                    aria-expanded="false" tabindex="-1"><span></span>全部</a></li>
+                                            <li><a class="lv2-link"
+                                                    href="category/women/bags-purses/"><span></span>包款</a>
+                                                <div class="level-3-full">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="links pull-left">
+                                                                <h6 class="hidden-xs hidden-sm">包款</h6>
+                                                                <ul id="nav-menu-3rd">
+                                                                    <li><a href="category/women/bags-purses/">所有包款</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/bags-purses/?sort=5&amp;style=1">後背包</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/bags-purses/?sort=5&amp;style=2">手提包</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/bags-purses/?sort=5&amp;style=3">肩
+                                                                            / 斜背包</a></li>
+                                                                    <li><a
+                                                                            href="category/women/bags-purses/?sort=5&amp;style=5">旅行包</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/bags-purses/?sort=5&amp;style=8">公事包</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/bags-purses/?sort=5&amp;style=117">水桶包</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/bags-purses/?sort=5&amp;style=118">手拿包</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/bags-purses/?sort=5&amp;style=131">提袋</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/bags-purses/?sort=5&amp;style=144">化妝包</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/bags-purses/?sort=5&amp;style=72">兒童背包</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/bags-purses/?sort=5&amp;style=218">腰包</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/bags-purses/?sort=5&amp;style=237">卡片夾</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/bags-purses/?sort=5&amp;style=239">零錢包</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="level-3-items pull-right hidden-xs hidden-sm">
+                                                                <div class="left"
+                                                                    style="background-image:url('../img/_sample/nav_cover_sample.jpg');">
+                                                                </div>
+                                                                <div class="right"><a
+                                                                        href="https://www.luxjoy.com/brand/BURBERRY/product/">
+                                                                        <figure><img class="img-responsive"
+                                                                                src="../img/_sample/nav-main-man.jpg">
+                                                                        </figure>
+                                                                        <h6>BURBERRY</h6><span></span>
+                                                                    </a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li><a class="lv2-link" href="category/women/wallets/"><span></span>皮夾</a>
+                                                <div class="level-3-full">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="links pull-left">
+                                                                <h6 class="hidden-xs hidden-sm">皮夾</h6>
+                                                                <ul id="nav-menu-3rd">
+                                                                    <li><a href="category/women/wallets/">所有皮夾</a></li>
+                                                                    <li><a
+                                                                            href="category/women/wallets/?sort=5&amp;style=235">長夾</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/wallets/?sort=5&amp;style=236">短夾</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/wallets/?sort=5&amp;style=237">卡片夾</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/wallets/?sort=5&amp;style=238">鑰匙包</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/wallets/?sort=5&amp;style=239">零錢包</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/wallets/?sort=5&amp;style=242">護照夾</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="level-3-items pull-right hidden-xs hidden-sm">
+                                                                <div class="left"
+                                                                    style="background-image:url('upload/product_type/5d5eaf845fc261ca2a38fc66a9827010.jpg');">
+                                                                </div>
+                                                                <div class="right"><a
+                                                                        href="https://www.luxjoy.com/brand/BVLGARI/product/">
+                                                                        <figure><img class="img-responsive"
+                                                                                src="../img/_sample/nav-main-man.jpg">
+                                                                        </figure>
+                                                                        <h6>BVLGARI</h6><span></span>
+                                                                    </a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li><a class="lv2-link" href="category/women/shoes/"><span></span>鞋子</a>
+                                                <div class="level-3-full">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="links pull-left">
+                                                                <h6 class="hidden-xs hidden-sm">鞋子</h6>
+                                                                <ul id="nav-menu-3rd">
+                                                                    <li><a href="category/women/shoes/">所有鞋子</a></li>
+                                                                    <li><a
+                                                                            href="category/women/shoes/?sort=5&amp;style=26">牛津鞋</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/shoes/?sort=5&amp;style=28">跟鞋</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/shoes/?sort=5&amp;style=29">平底鞋</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/shoes/?sort=5&amp;style=204">運動鞋</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="level-3-items pull-right hidden-xs hidden-sm">
+                                                                <div class="left"
+                                                                    style="background-image:url('../img/_sample/nav_cover_sample.jpg');">
+                                                                </div>
+                                                                <div class="right"><a
+                                                                        href="https://www.luxjoy.com/brand/chanel/product/">
+                                                                        <figure><img class="img-responsive"
+                                                                                src="../img/_sample/nav-main-man.jpg">
+                                                                        </figure>
+                                                                        <h6>CHANEL</h6><span></span>
+                                                                    </a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li><a class="lv2-link" href="category/women/watches/"><span></span>手錶</a>
+                                                <div class="level-3-full">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="links pull-left">
+                                                                <h6 class="hidden-xs hidden-sm">手錶</h6>
+                                                                <ul id="nav-menu-3rd">
+                                                                    <li><a href="category/women/watches/">所有手錶</a></li>
+                                                                    <li><a
+                                                                            href="category/women/watches/?sort=5&amp;style=31">珍珠鍊錶</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/watches/?sort=5&amp;style=32">鑽錶</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/watches/?sort=5&amp;style=127">腕錶</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="level-3-items pull-right hidden-xs hidden-sm">
+                                                                <div class="left"
+                                                                    style="background-image:url('../img/_sample/nav_cover_sample.jpg');">
+                                                                </div>
+                                                                <div class="right"><a
+                                                                        href="https://www.luxjoy.com/brand/newgate/product/">
+                                                                        <figure><img class="img-responsive"
+                                                                                src="../img/_sample/nav-main-man.jpg">
+                                                                        </figure>
+                                                                        <h6>NEWGATE</h6><span></span>
+                                                                    </a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li><a class="lv2-link"
+                                                    href="category/women/accessories/"><span></span>服飾配飾</a>
+                                                <div class="level-3-full">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="links pull-left">
+                                                                <h6 class="hidden-xs hidden-sm">服飾配飾</h6>
+                                                                <ul id="nav-menu-3rd">
+                                                                    <li><a href="category/women/accessories/">所有服飾配飾</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/accessories/?sort=5&amp;style=21">鈔票夾
+                                                                            / 票證收納</a></li>
+                                                                    <li><a
+                                                                            href="category/women/accessories/?sort=5&amp;style=12">鑰匙圈
+                                                                            / 吊飾</a></li>
+                                                                    <li><a
+                                                                            href="category/women/accessories/?sort=5&amp;style=13">個人飾品</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/accessories/?sort=5&amp;style=16">穿搭配件</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/accessories/?sort=5&amp;style=173">衣著</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/accessories/?sort=5&amp;style=186">天然香氛</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/accessories/?sort=5&amp;style=235">長夾</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/accessories/?sort=5&amp;style=237">卡片夾</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/accessories/?sort=5&amp;style=238">鑰匙包</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/accessories/?sort=5&amp;style=239">零錢包</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/accessories/?sort=5&amp;style=240">風衣</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/accessories/?sort=5&amp;style=242">護照夾</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="category/women/accessories/?sort=5&amp;style=244">背帶</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="level-3-items pull-right hidden-xs hidden-sm">
+                                                                <div class="left"
+                                                                    style="background-image:url('../img/_sample/nav_cover_sample.jpg');">
+                                                                </div>
+                                                                <div class="right"><a
+                                                                        href="https://www.luxjoy.com/brand/hermes/product/">
+                                                                        <figure><img class="img-responsive"
+                                                                                src="upload/product_type/fc6cd7d14dc70cf1076e349132f234f0.jpg">
+                                                                        </figure>
+                                                                        <h6>HERMÈS</h6><span></span>
+                                                                    </a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a href="category/men/"><span></span>男士</a></li>
+                            <li><a href="category/Kids/"><span></span>親子</a></li>
+                            <li><a href="category/lifestyle/"><span></span>生活</a></li>
+                        </ul>
+                        <ul class="level-1 pull-left">
+                            <li class="no_arrow"><a href="letsjoy/">風格誌</a></li>
+                            <li class="no_arrow"><a class="no-letter-spacing" href="product/sale/?sort=4"
+                                    style="color:#fc5b5d;">SALE</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pull-right text-center bag_currency"><a id="icon-bag" title="我的購物車" href="order/cart/"><span
+                            class="cart_count">0</span></a>
+                    <div class="btn-group bootstrap-select mobile-currency"><select
+                            class="mobile-currency-select selectpicker mobile-selectpicker" id="currency"
+                            tabindex="-98">
+                            <option value="0"
+                                data-content="&lt;img src='../img/common/icon-tw.png' style='width:20px'/&gt;"
+                                selected=""></option>
+                            <option value="1"
+                                data-content="&lt;img src='../img/common/icon-cn.png' style='width:20px'/&gt;"></option>
+                            <option value="2"
+                                data-content="&lt;img src='../img/common/icon-hk.png' style='width:20px'/&gt;"></option>
+                        </select></div>
+                    <div class="btn-group bootstrap-select hidden-sm"><select class="hidden-sm selectpicker"
+                            id="currency" tabindex="-98">
+                            <option value="0"
+                                data-content="&lt;img src='../img/common/icon-tw.png' style='width:20px'/&gt; NTD"
+                                selected=""></option>
+                            <option value="1"
+                                data-content="&lt;img src='../img/common/icon-cn.png' style='width:20px'/&gt; RMB">
+                            </option>
+                            <option value="2"
+                                data-content="&lt;img src='../img/common/icon-hk.png' style='width:20px'/&gt; HKD">
+                            </option>
+                        </select></div>
+                </div>
+                <div id="nav-alert"><a class="close" href="javascript:void(0)"></a>
+                    <div class="row cart_alert"></div>
+                </div>
+                <div id="msg-alert"><a class="close" href="javascript:void(0)"></a>
+                    <div class="row"></div>
+                </div>
+            </div>
+        </nav>
+        <main class="main index">
+            <section id="app" style="display: block;">
+                <div class="preload" style="display: none;"><img
+                        src="https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/carousel-1-WL.jpg"><img
+                        src="https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/carousel-1-WR.jpg"><img
+                        src="https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/carousel-1-WL-m.jpg"><img
+                        src="https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/carousel-1-WR-m.jpg"><img
+                        src="https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/carousel-2-ML.jpg"><img
+                        src="https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/carousel-2-MR.jpg"><img
+                        src="https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/carousel-2-ML-m.jpg"><img
+                        src="https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/carousel-2-MR-m.jpg"><img
+                        src="https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/carousel-3-KL.jpg"><img
+                        src="https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/carousel-3-KR.jpg"><img
+                        src="https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/carousel-3-KL-m.jpg"><img
+                        src="https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/carousel-3-KR-m.jpg"><img
+                        src="https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/carousel-4-LL.jpg"><img
+                        src="https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/carousel-4-LR.jpg"><img
+                        src="https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/carousel-4-LL-m.jpg"><img
+                        src="https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/carousel-4-LR-m.jpg"></div>
+                <div class="container">
+                    <div class="content">
+                        <div class="slider">
+                            <div class="slide">
+                                <div class="picture" @mouseover="pause = true" @mouseleave="pause = false"><a
+                                        :href="`${currentSlide.url}`">
+                                        <div class="top animation-wrapper"><img class="left hidden-xs"
+                                                :src="`https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/${currentSlide.left}`"><img
+                                                class="right hidden-xs"
+                                                :src="`https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/${currentSlide.right}`"><img
+                                                class="left visible-xs"
+                                                :src="`https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/${currentSlide.mobileLeft}`"><img
+                                                class="right visible-xs"
+                                                :src="`https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/${currentSlide.mobileRight}`">
+                                        </div>
+                                    </a><a :href="`${currentSlide.url}`">
+                                        <div class="fake animation-wrapper"><img class="left"
+                                                :src="`https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/${fakeSlide.left}`"><img
+                                                class="right"
+                                                :src="`https://s3.luxjoy.com/theme/main/img/event/2019-july-banners/${fakeSlide.right}`">
+                                        </div>
+                                    </a>
+                                    <div class="section-btn-text text-center">
+                                        <h2 class="hidden-xs">時尚冒險&nbsp&nbsp你是山系人還是海系人</h2>
+                                        <h1 class="hidden-xs">MOUNTAIN or BEACH</h1><a :href="`${currentSlide.url}`">
+                                            <div class="cat"><span class="catText"
+                                                    :class="{ btnTextMomen: btnIsMomen,  btnTextLife: btnIsLife}">{{ btnText }}</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-indicator">
+                                <div class="dot" v-for="(slide, i) in slides" :class="{ active: currentIndex === i }"
+                                    @click="moveTo(i)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="kv kv-19july kv-carousel-19july" style="display: none; margin-top: 10px;">
+                <div class="container">
+                    <div class="section-btn-text text-center">
+                        <h2 class="hidden-xs">時尚冒險&nbsp&nbsp你是山系人還是海系人</h2>
+                        <h1 class="hidden-xs">MOUNTAIN or BEACH</h1><a class="carousel-link july19-btn"
+                            href="https://www.luxjoy.com/category/women/?utm_source=mainbanner&amp;utm_medium=Women&amp;utm_campaign=201907"><span
+                                class="carousel-text">WOMEN</span></a>
+                    </div>
+                    <div class="owl-carousel">
+                        <!-- type 1 WOMAN-->
+                        <div class="carousel-bg carousel-woman">
+                            <div class="item">
+                                <div class="slider-item" id="carousel-woman-left"><img class="hidden-xs"
+                                        src="img/event/2019-july-banners/carousel-1-WL.jpg" alt=""><img
+                                        class="visible-xs" src="img/event/2019-july-banners/carousel-1-WL-m.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="slider-item" id="carousel-woman-right"><img class="hidden-xs"
+                                        src="img/event/2019-july-banners/carousel-1-WR.jpg" alt=""><img
+                                        class="visible-xs" src="img/event/2019-july-banners/carousel-1-WR-m.jpg" alt="">
+                                </div>
+                            </div>
+                        </div><!-- type 2 MAN-->
+                        <div class="carousel-bg carousel-man">
+                            <div class="item">
+                                <div class="slider-item" id="carousel-man-left"><img class="hidden-xs"
+                                        src="img/event/2019-july-banners/carousel-2-ML.jpg" alt=""><img
+                                        class="visible-xs" src="img/event/2019-july-banners/carousel-2-ML-m.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="slider-item" id="carousel-man-right"><img class="hidden-xs"
+                                        src="img/event/2019-july-banners/carousel-2-MR.jpg" alt=""><img
+                                        class="visible-xs" src="img/event/2019-july-banners/carousel-2-MR-m.jpg" alt="">
+                                </div>
+                            </div>
+                        </div><!-- type 3 KID-->
+                        <div class="carousel-bg carousel-kid">
+                            <div class="item">
+                                <div class="slider-item" id="carousel-kid-left"><img class="hidden-xs"
+                                        src="img/event/2019-july-banners/carousel-3-KL.jpg" alt=""><img
+                                        class="visible-xs" src="img/event/2019-july-banners/carousel-3-KL-m.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="slider-item" id="carousel-kid-right"><img class="hidden-xs"
+                                        src="img/event/2019-july-banners/carousel-3-KR.jpg" alt=""><img
+                                        class="visible-xs" src="img/event/2019-july-banners/carousel-3-KR-m.jpg" alt="">
+                                </div>
+                            </div>
+                        </div><!-- type 4 LIFE-->
+                        <div class="carousel-bg carousel-life">
+                            <div class="item">
+                                <div class="slider-item" id="carousel-life-left"><img class="hidden-xs"
+                                        src="img/event/2019-july-banners/carousel-4-LL.jpg" alt=""><img
+                                        class="visible-xs" src="img/event/2019-july-banners/carousel-4-LL-m.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="slider-item" id="carousel-life-right"><img class="hidden-xs"
+                                        src="img/event/2019-july-banners/carousel-4-LR.jpg" alt=""><img
+                                        class="visible-xs" src="img/event/2019-july-banners/carousel-4-LR-m.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="kv kv-19july kv-carousel-text-19july visible-xs">
+                <article>
+                    <h1 class="black">BEACH<br><span>OR</span><br>MOUNTAIN</h1>
+                    <h2 class="black"> 時尚冒險 你是<span style="color: #00a232;">山系人</span>還是<span
+                            style="color: #00ced6;">海系人</span></h2>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 nav-link-main">
+                        <ul class="clearfix">
+                            <li><a>關於我們</a></li>
+                            <li><a>訂購須知</a></li>
+                            <li><a>媒體報導</a></li>
+                            <li><a>聯絡我們</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 edm">
+                        <h6>訂閱電子報</h6>
+                        <form class="form-inline">
+                            <fieldset class="form-group fail"><input class="form-control" type="email"
+                                    placeholder="電 子 信 箱 地 址"><span class="help">這裡放錯誤訊息</span></fieldset><button
+                                class="btn" type="submit">送 出</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 promise">
+                        <ul class="clearfix">
+                            <li>保 證<br>真 品</li>
+                            <li><b>7</b>天<br>鑑賞期</li>
+                            <li>大 台 北<br>鑑賞接送</li>
+                            <li>全 站<br>免 運</li>
+                        </ul>
+                    </div>
+                    <div class="footer_currency">
+                        <h6>Country</h6><select class="selectpicker">
+                            <option value="1"
+                                data-content="&lt;img src='img/common/icon-tw.png' style='width:20px'/&gt; 台灣（NT ＄）">
+                            </option>
+                            <option value="2"
+                                data-content="&lt;img src='img/common/icon-cn.png' style='width:20px'/&gt; 中國（CNT ￥）">
+                            </option>
+                            <option value="3"
+                                data-content="&lt;img src='img/common/icon-hk.png' style='width:20px'/&gt; 香港（NT ＄）">
+                            </option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 social">
+                        <h6>聯絡我們</h6>
+                        <ul class="clearfix">
+                            <li><a class="fb" target="_blank" title="Facebook">Facebook</a></li>
+                            <li><a class="ig" target="_blank" title="Instagram">Instagram</a></li>
+                            <li><a class="yt" target="_blank" title="Youtube">Youtube</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 nav-link-sub">
+                        <ul class="clearfix">
+                            <li><a><b>成為 VVIP</b></a></li>
+                            <li><a>服務條款</a></li>
+                            <li><a>隱私權政策</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 copyright">Copyright © 2015 LuxJoy Inc. All Rights Reserved</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/app.js"></script>
+    <script>$(document).ready(function () {
+            Index.init()
+        })</script>
+    <script src="js/2019-july-banners3-vue.js"></script>
+</body>
+
+</html>
